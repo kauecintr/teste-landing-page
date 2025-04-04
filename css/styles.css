@@ -1,0 +1,266 @@
+:root {
+    --main-color: #00096e;
+    --footer-color: #343131;
+    --font-color: #423d3da2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+}
+
+/* Topo */
+.top-bar {
+    background: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+/* Container geral */
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    background: #464242;
+}
+
+/* Header */
+header {
+    color: var(--font-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+header span {
+    font-size: 10px;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    margin-left: auto;
+    margin-right: 70px;
+    position: relative;
+    z-index: 100;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu > li:hover > a {
+    background: white;
+}
+
+.submenu,
+.submenu2 {
+    display: none;
+    position: absolute;
+    background: var(--main-color);
+    min-width: 150px;
+    z-index: 200;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%; /* posiciona o submenu no meio do item pai */
+    transform: translateX(-50%); /* move o submenu metade da sua largura pra esquerda */
+    background: var(--main-color);
+    min-width: 150px;
+    z-index: 200;
+}
+
+.submenu2 {
+    top: 0;
+    left: 100%;
+    z-index: 300;
+}
+
+.submenu li,
+.submenu2 li {
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.submenu li a,
+.submenu2 li a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.submenu li a:hover,
+.submenu2 li a:hover {
+    background: var(--main-color);
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu li:hover .submenu2 {
+    display: block;
+}
+
+/* Slider */
+.slider-container {
+    background: #ccc;
+    padding: 0 10px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.splide {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.slide-image {
+    height: 500px;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Logo */
+.logo {
+    background: var(--main-color);
+    color: white;
+    font-size: 18px;
+    width: 160px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+/* Conteúdo principal */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 20px;
+    color: var(--font-color);
+}
+
+.text-container h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.text-container p,
+.text-container ul {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.text-container li {
+    margin-bottom: 10px;
+}
+
+/* "Imagem" simbólica */
+.image-container {
+    flex: 0 0 auto;
+    width: 400px;
+    height: 250px;
+    background: var(--main-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Boxes */
+.boxes {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.boxes h2 {
+    font-size: 24px;
+    color: var(--font-color);
+    margin-bottom: 20px;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 200px; /* Largura fixa */
+    height: 200px; /* Altura fixa */
+    background: var(--main-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.box-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--font-color);
+}
