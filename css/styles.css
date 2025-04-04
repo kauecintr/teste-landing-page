@@ -1,6 +1,6 @@
 :root {
     --main-color: #00096e;
-    --footer-color: #343131;
+    --footer-color: #474747;
     --font-color: #423d3da2;
 }
 
@@ -92,8 +92,8 @@ nav {
     display: none;
     position: absolute;
     top: 100%;
-    left: 50%; /* posiciona o submenu no meio do item pai */
-    transform: translateX(-50%); /* move o submenu metade da sua largura pra esquerda */
+    left: 50%; 
+    transform: translateX(-50%); 
     background: var(--main-color);
     min-width: 150px;
     z-index: 200;
@@ -207,8 +207,14 @@ nav {
     margin-bottom: 10px;
 }
 
+.text-container ul {
+    list-style-position: inside;
+}
+
 .text-container li {
-    margin-bottom: 10px;
+    text-align: justify;
+    line-height: 1.6; 
+    text-indent: 20px; 
 }
 
 /* "Imagem" simbólica */
@@ -229,7 +235,7 @@ nav {
 .boxes {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     padding: 50px 0;
 }
 
@@ -237,6 +243,8 @@ nav {
     font-size: 24px;
     color: var(--font-color);
     margin-bottom: 20px;
+    text-align: left;
+    padding-left: 50px; 
 }
 
 .box-container {
@@ -247,8 +255,8 @@ nav {
 }
 
 .box {
-    width: 200px; /* Largura fixa */
-    height: 200px; /* Altura fixa */
+    width: 200px; 
+    height: 200px;
     background: var(--main-color);
     color: white;
     display: flex;
@@ -263,4 +271,42 @@ nav {
     margin-top: 10px;
     font-size: 14px;
     color: var(--font-color);
+}
+
+/*Footer*/
+footer {
+    background: #343131;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+}
+
+.footer {
+    background: var(--footer-color);
+    padding: 40px 0; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 65px; 
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; 
+}
+
+.footer ul li a {
+    color: rgb(162, 161, 161);
+    text-decoration: none;
+}
+
+.footer div {
+    margin-top: 30px; 
+    color: white;
 }
