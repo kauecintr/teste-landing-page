@@ -37,7 +37,7 @@ a {
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    margin-left: 80%;
+    margin-left: 70px;
 }
 
 /* header */
@@ -300,4 +300,130 @@ footer {
 .footer div {
     margin-top: 30px; 
     color: white;
+}
+
+
+
+/* media query */
+@media (max-width: 768px) {
+    /* Top Bar */
+    .top-bar address {
+        margin-right: 20px;
+        font-size: 14px;
+    }
+
+    /* Header */
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        margin: 0;
+        order: 1;
+    }
+
+    /* Navegação */
+    nav {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu > li > a {
+        padding: 10px;
+    }
+
+    .submenu {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+
+    .submenu2 {
+        left: 0;
+        top: 100%;
+    }
+
+    /* Slider */
+    .slider-container {
+        min-height: 300px;
+    }
+
+    .slide-image {
+        height: 300px;
+    }
+
+    /* Conteúdo Principal */
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .text-container {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Boxes */
+    .boxes {
+        padding: 20px;
+    }
+
+    .boxes h2 {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .box-container {
+        gap: 15px;
+    }
+
+    .box {
+        width: calc(50% - 10px);
+        height: 150px;
+    }
+
+    /* Footer */
+    .footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer {
+        gap: 30px;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 100%;
+    }
+    
+    .top-bar address {
+        display: block;
+        margin-right: 0;
+    }
+    
+    .top-bar address br {
+        display: none;
+    }
 }
