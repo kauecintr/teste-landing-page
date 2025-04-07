@@ -80,7 +80,8 @@ nav {
     position: absolute;
     background: var(--main-color);
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     min-width: 150px;
     z-index: 999;
 }
@@ -93,8 +94,8 @@ nav {
     background: var(--main-color);
     min-width: 150px;
     z-index: 1000;
+    text-align: center;
 }
-
 .submenu li,
 .submenu2 li {
     list-style: none;
